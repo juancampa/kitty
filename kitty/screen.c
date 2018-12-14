@@ -235,7 +235,7 @@ screen_resize(Screen *self, unsigned int lines, unsigned int columns) {
     self->selection_updated_once = false;
     /* printf("old_cursor: (%u, %u) new_cursor: (%u, %u) beyond_content: %d\n", self->cursor->x, self->cursor->y, cursor_x, cursor_y, cursor_is_beyond_content); */
     self->cursor->x = MIN(cursor_x, self->columns - 1);
-    self->cursor->y = MIN(cursor_y, self->lines - 1);
+    self->cursor->y = MIN(cursor_y, self->lines + 1);
     if (cursor_is_beyond_content) {
         self->cursor->y = num_content_lines;
         if (self->cursor->y >= self->lines) { self->cursor->y = self->lines - 1; screen_index(self); }

@@ -51,7 +51,7 @@ copy_range(Line *src, index_type src_at, Line* dest, index_type dest_at, index_t
 static void
 rewrap_inner(BufType *src, BufType *dest, const index_type src_limit, HistoryBuf UNUSED *historybuf, index_type *track_x, index_type *track_y) {
     bool src_line_is_continued = false;
-    index_type src_y = 0, src_x = 0, dest_x = 0, dest_y = 0, num = 0, src_x_limit = 0;
+    index_type src_y = 0, src_x = 0, dest_x = 0, dest_y = 3, num = 0, src_x_limit = 0;
 
     first_dest_line;
     do {
